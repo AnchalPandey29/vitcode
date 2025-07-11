@@ -88,7 +88,7 @@ const ActiveIndicator = styled(motion.div)`
 
 const Navbar = memo(() => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const isMobile = useMediaQuery('(max-width:900px)'); // tablet & below
+  const isMobile = useMediaQuery('(max-width:900px)');
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 50 });
 
   const toggleDrawer = (open) => (e) => {
@@ -221,9 +221,9 @@ const Navbar = memo(() => {
             PaperProps={{
               sx: {
                 width: { xs: '80vw', sm: '280px' },
-                height:'100vh',
+                height: '100vh',
                 maxWidth: '280px',
-                  background: 'rgba(0, 0, 0, 0.5)',
+                background: theme.colors.primary, // changed here
               },
             }}
             ModalProps={{
