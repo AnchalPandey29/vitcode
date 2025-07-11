@@ -88,7 +88,7 @@ const Footer = () => {
       Quick Links
     </Typography>
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.8 }}>
-      {['Home', 'Programs', 'Workshops', 'Partners', 'Testimonials', 'Certificates'].map((item) => (
+      {['Home', 'Programs', 'Partners', 'Testimonials', 'Certificates'].map((item) => (
         <motion.div key={item} whileHover={{ x: 5 }} transition={{ type: 'spring', stiffness: 200 }}>
           <Link href={`/${item.toLowerCase()}`} color="inherit" underline="hover">
             <Typography variant="body2">{item}</Typography>

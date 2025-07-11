@@ -17,6 +17,7 @@ const TestimonialsPage = React.lazy(() => import('./components/TestimonialsPage'
 const ProgramsPage = React.lazy(() => import('./components/ProgramsPage'));
 const PartnersPage = React.lazy(() => import('./components/PartnersPage'));
 const CertificatesPage = React.lazy(() => import('./components/CertificatesPage'));
+const NotFoundPage = React.lazy(() => import('./components/NotFoundPage')); // ✅ new
 
 // Error Boundary
 class ErrorBoundary extends Component {
@@ -70,7 +71,7 @@ const App = () => {
         <Router>
           <Box sx={{ minHeight: '100vh', width: '100vw', display: 'flex', flexDirection: 'column', m: 0, p: 0 }}>
             <Navbar />
-            <Box sx={{ mt: { xs: '56px', sm: '64px' } }}> {/* Offset for fixed navbar */}
+            <Box sx={{ mt: { xs: '56px', sm: '64px' } }}>
               <ErrorBoundary>
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
@@ -80,6 +81,7 @@ const App = () => {
                     <Route path="/programs" element={<ProgramsPage />} />
                     <Route path="/partners" element={<PartnersPage />} />
                     <Route path="/certificates" element={<CertificatesPage />} />
+                    <Route path="*" element={<NotFoundPage />} /> {/* ✅ new */}
                   </Routes>
                 </Suspense>
               </ErrorBoundary>
