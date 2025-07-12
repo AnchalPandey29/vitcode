@@ -116,12 +116,10 @@ const PartnersPage = () => {
           color={theme.colors.primary}
             variant="body1"
             sx={{
-              
               textAlign: "center",
               mb: 5,
               maxWidth: "700px",
               mx: "auto",
-              color: theme.colors.textSecondary,
             }}
           >
             We proudly collaborate with industry-leading institutions and
