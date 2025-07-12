@@ -45,6 +45,7 @@ const FeaturedProgramsSection = () => (
 
     <Container sx={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
       <Typography
+      color={theme.colors.primary}
         component={motion.h2}
         variant="h2"
         sx={{ mb: 2, fontWeight: 700, fontSize: { xs: '2rem', md: '2.8rem' } }}
@@ -56,11 +57,11 @@ const FeaturedProgramsSection = () => (
         Featured Programs
       </Typography>
       <Typography
+        color={theme.colors.primary}
         sx={{
           maxWidth: '620px',
           mx: 'auto',
           mb: 5,
-          color: theme.colors.textSecondary,
           fontSize: { xs: '1rem', md: '1.1rem' },
         }}
       >
@@ -68,17 +69,19 @@ const FeaturedProgramsSection = () => (
       </Typography>
 
       {/* Horizontal scroll on mobile, grid on larger */}
-      <Box
-        sx={{
-          display: { xs: 'flex', md: 'grid' },
-          gridTemplateColumns: { md: 'repeat(3, 1fr)' },
-          gap: { xs: 2, md: 4 },
-          overflowX: { xs: 'auto', md: 'unset' },
-          px: { xs: 2, md: 0 },
-          scrollSnapType: { xs: 'x mandatory', md: 'none' },
-          WebkitOverflowScrolling: 'touch',
-        }}
-      >
+   <Box
+  sx={{
+    display: { xs: 'flex', md: 'grid' },
+    justifyContent: { md: 'center' },
+    gridTemplateColumns: { md: 'repeat(auto-fit, minmax(280px, 1fr))' },
+    gap: { xs: 2, md: 0 },
+    overflowX: { xs: 'auto', md: 'unset' },
+    px: { xs: 2, md: 0 },
+    scrollSnapType: { xs: 'x mandatory', md: 'none' },
+    WebkitOverflowScrolling: 'touch',
+  }}
+>
+
         {featuredCourses.map((course, i) => (
           <motion.div
             key={i}
@@ -98,6 +101,7 @@ const FeaturedProgramsSection = () => (
                 mx: 'auto',
                 display: 'flex',
                 flexDirection: 'column',
+                justifyContent: 'space-around',
                 backdropFilter: 'blur(8px)',
                 borderRadius: theme.borderRadius.medium,
                 boxShadow: theme.shadows.card,

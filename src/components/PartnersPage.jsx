@@ -101,6 +101,7 @@ const PartnersPage = () => {
         >
           <Typography
             variant="h1"
+            color={theme.colors.primary}
             mt={theme.spacing.lg}
             sx={{
               textAlign: "center",
@@ -112,8 +113,10 @@ const PartnersPage = () => {
             Our Trusted Partners
           </Typography>
           <Typography
+          color={theme.colors.primary}
             variant="body1"
             sx={{
+              
               textAlign: "center",
               mb: 5,
               maxWidth: "700px",
@@ -141,6 +144,7 @@ const PartnersPage = () => {
                   </Suspense>
                   <Typography
                     variant="h3"
+                    color={theme.colors.primary}
                     sx={{
                       mt: theme.spacing.sm,
                       fontSize: "1.2rem",

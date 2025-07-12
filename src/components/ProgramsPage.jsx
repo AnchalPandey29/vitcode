@@ -189,6 +189,7 @@ const ProgramsPage = memo(() => {
           transition={{ duration: 0.7 }}
         >
           <Typography
+          color={theme.colors.primary}
             variant="h1"
             align="center"
             mt={theme.spacing.lg}
@@ -201,6 +202,7 @@ const ProgramsPage = memo(() => {
             Discover Your Path
           </Typography>
           <Typography
+          color={theme.colors.primary}
             align="center"
             sx={{ mb: theme.spacing.lg, opacity: 0.8 }}
           >
@@ -304,7 +306,7 @@ const ProgramsPage = memo(() => {
                         objectFit: "cover",
                       }}
                     />
-                    <Box sx={{ p: theme.spacing.sm, flexGrow: 1 }}>
+                    <Box sx={{ p: theme.spacing.sm, flexGrow: 1 }} color={theme.colors.primary}>
                       <Typography
                         variant="subtitle1"
                         color="theme.colors.primary"

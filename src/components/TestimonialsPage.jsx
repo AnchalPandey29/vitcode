@@ -84,6 +84,7 @@ const TestimonialsPage = () => {
             variant="h2"
             sx={{
               textAlign: 'center',
+                            color: theme.colors.primary,
               fontWeight: 700,
               mb: 2,
               fontSize: { xs: '2rem', md: '2.6rem' }
@@ -94,7 +95,7 @@ const TestimonialsPage = () => {
           <Typography
             sx={{
               textAlign: 'center',
-              color: theme.colors.textSecondary,
+              color: theme.colors.primary,
               mb: 4,
               maxWidth: '650px',
               mx: 'auto'

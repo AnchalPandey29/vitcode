@@ -160,10 +160,10 @@ const CertificatePage = () => {
       <Container sx={{ maxWidth: '960px' }}>
         {/* Hero */}
         <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <Typography variant="h1" textAlign="center" fontWeight={700} fontSize={{ xs: '2rem', md: '2.8rem' }} mt={theme.spacing.lg} mb={1}>
+          <Typography variant="h1" textAlign="center" fontWeight={700} fontSize={{ xs: '2rem', md: '2.8rem' }} mt={theme.spacing.lg} mb={1} color={theme.colors.primary}>
             Certificate Verification & Generation
           </Typography>
-          <Typography textAlign="center" color={theme.colors.text} opacity={0.8} mb={theme.spacing.lg}>
+          <Typography textAlign="center" color={theme.colors.primary} opacity={0.8} mb={theme.spacing.lg}>
             Authenticate or create your official VitCode certificate with ease.
           </Typography>
         </motion.div>
